@@ -1,0 +1,43 @@
+<?php
+namespace BLL;
+include_once 'C:\xampp\htdocs\lpadsphpt1\lpadsphpt120240606\DAL\Equipamento.php';
+use DAL;
+
+class Equipamento
+{
+    public function Select()
+    {   
+        $dalEqpto = new \DAL\Equipamento();   
+        return $dalEqpto->Select();
+    }
+
+    public function SelectByID(int $id)
+    {   
+        $dalEqpto = new \DAL\Equipamento();   
+        return $dalEqpto->SelectByID($id);
+    }
+
+    public function Insert(\MODEL\Equipamento $equipamento) {
+        $dalEqpto = new \DAL\Equipamento();   
+
+        ///regras de negócio que dependem do sistema propoto 
+        
+        return $dalEqpto->Insert($equipamento);
+    }
+
+
+    public function Update(\MODEL\Equipamento $equipamento) {
+        $dalEqpto = new \DAL\Equipamento();   
+
+        ///regras de negócio que dependem do sistema propoto 
+        
+        return $dalEqpto->Update($equipamento);
+    }
+
+   public function Delete(int $id)
+    {   
+        $dalEqpto = new \DAL\Equipamento();   
+        return $dalEqpto->Delete($id);
+    }
+}
+?>
